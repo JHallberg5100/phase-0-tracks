@@ -1,0 +1,20 @@
+#oct{
+  margin: auto;
+  width: 200px;
+  display:block;
+  padding: 100px 1px 1px 1px;
+  z-index: -1;
+}
+#glass{
+  position:relative;
+  bottom: 280px;
+  left: 325px;
+  z-index:1
+
+}
+#hat{
+  position:relative;
+  bottom: 375px;
+  left: 550px;
+  z-index:1
+}
