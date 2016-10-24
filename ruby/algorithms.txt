@@ -1,0 +1,43 @@
+Determine if the required floor is up or down
+  if down, push bottom button with downward arrow
+  if up, press top with upward arrow
+Wait for elevtor doors to open
+Enter elevator
+Push button with number of desired floor on it
+wait for doors to close
+wait for doors to open
+exit elevator
+
+
+
+Instructions for Showering
+1.pull out handle
+2. wait 30 second for water to heat up
+3. enter shower
+4.close door
+5.stand under water spray
+6. Take temprature of water
+  if too warm, turn knob to right
+  if too cool, turn knob to left
+    Continue until water temprature is good
+7.take soap
+8. move soap in back and forth motion across skin
+9.continue motion, moving up and down body
+10.continue until all skin soapy
+11. put down soap
+12. repeat steps 8-10 to purge soap bubbles from body
+13. pick up shampoo
+14.remove cap
+15.spread shampoo in hand
+16.shut cap
+17.put down shampoo
+18.rub other hand onto shampoo covered hand
+19.place both hands in hair
+20.rub scalp in circular motion
+21.repeat motion over head until all hair is soapy
+22.repeat now under spray, until all hair is soapless
+23.repeat steps 13-22, but with conditioner.
+24.Luxuriate in warm water until content.
+25.press handle in
+26.open door
+27.leave shower
