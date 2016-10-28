@@ -46,6 +46,16 @@ until employee_num == 0
   if name == "Drake Cula" || name == "Tu Fang"
     results = "Definitely a vampire"
   end
+  pull = ""
+  while pull != "done"
+    puts "What are your allergies?  Enter 'done' when finished"
+    pull = gets.chomp
+
+    if pull == "sunshine" || pull == "sunlight"
+      results = "Probably a vampire"
+      break
+    end
+  end
   p results
   employee_num -= 1
 end
