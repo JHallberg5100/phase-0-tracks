@@ -59,3 +59,4 @@ until employee_num == 0
   p results
   employee_num -= 1
 end
+puts "Acutally, nevermind!  What do these questions have to do with anything.  Let's all be friends."
