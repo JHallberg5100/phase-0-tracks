@@ -52,5 +52,22 @@ input = gets.chomp
 input = input.to_s
 hash[:personality]= input
 #finalize data entry
-p hash
+puts "The data for this individual is as follows"
+puts hash
 #give oppertunity to update keys
+puts "Would you like to make any changes?"
+input =gets.chomp
+if input == "yes" || input == "true"
+  puts "What would you like to change?"
+  new_sym = gets.chomp
+  if new_sym == "done"
+  p "ok"
+  exit
+  else
+    new_sym = new_sym.to_sym
+    puts "New value?"
+    input = gets.chomp
+    hash[new_sym] = input
+  end
+puts hash
+end
