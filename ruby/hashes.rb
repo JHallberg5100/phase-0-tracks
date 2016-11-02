@@ -60,7 +60,7 @@ input =gets.chomp
 if input == "yes" || input == "true"
   puts "What would you like to change?"
   new_sym = gets.chomp
-  if new_sym == "done"
+  if new_sym == "none"
   p "ok"
   exit
   else
