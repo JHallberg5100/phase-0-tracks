@@ -17,5 +17,12 @@ def array_search(x, y)
 end
 
 tester= [2,35,26,34,5,457,235,46,732,434,734,]
+#Take an integer, and have an array of that integer length
 
-array_search(tester, 76)
+def fibo(input_i)
+  @output_array = [0, 1]
+  until @output_array.length == input_i
+    @output_array << @output_array[-2] + @output_array[-1]
+  end
+  return @output_array
+end
