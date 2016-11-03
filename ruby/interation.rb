@@ -29,13 +29,35 @@ array.map! do |critter|
 end
 p array
 
-array.map! do |critter|
-  numb = 0
-  while numb <= critter.index
-  if critter[numb].index <= 4
-    critter[numb] = nil
-    numb += 1
-  else
-  numb +=1
+array.each do |critter|
+  numb=0
+  if critter.length <= 5
+    p "The #{critter} is a short word"
+    numb +=1
 
+else
+  numb +=1
+end
+end
+p array
+#  numb = 0
+#  while numb <= critter.length
+  #  if critter[numb].length <= 4
+      #critter.delete!(numb)
+    #  numb += 1
+
+  #  else
+  #    numb +=1
+  #  end
+  #end
+#end
+life.each do |key, word|
+  if key.length == word.length
+    puts "I did not expect that"
+
+  elsif key.length <= word.length
+  puts  "yeah, #{key} seems shorter then #{word}"
+  else
+     puts "#{word} has few letters in it"
+end
 end
