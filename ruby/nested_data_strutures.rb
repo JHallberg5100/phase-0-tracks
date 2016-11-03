@@ -4,25 +4,25 @@
 #To begin, we define the data for the maps.
 continent= {
   :drakenstrom => {
-    :vigurd =>[302, 20,32,00]
-    :turi => [9045, 400, 242, 17]
-    :iblisk => [74302, 5023, 2103, 250]
-    :durrip => [3423, 436, 212, 74]
-  }
+    :vigurd =>{["Vigurd", 302, 20,32,00]},
+    :turi => {["Turi", 9045, 400, 242, 17]},
+    :iblisk => {["Iblisk", 74302, 5023, 2103, 250]},
+    :durrip => {["Durrip",3423, 436, 212, 74]},
+  },
   :malvurnia => {
-    :oblast => [1500, 200, 106, 00],
-    :churum => [2134, 523, 325, 15],
-    :devensk => [1898, 700, 400, 00],
-    :wevensk => [70000, 5000, 3530, 300]
-    :povonk => [43000, 3002, 3433, 2000]
-    :nevegg => [50323, 7503, 2032, 00],
-  }
+    :oblast => {["Oblast", 1500, 200, 106, 00]},
+    :churum => {["Churum", 2134, 523, 325, 15]},
+    :devensk => {["Devensk", 1898, 700, 400, 00]},
+    :wevensk => {["Wevensk",70000, 5000, 3530, 300]},
+    :povonk => {["Povonk", 43000, 3002, 3433, 2000]},
+    :nevegg => {["Nevegg", 50323, 7503, 2032, 00]},
+  },
   :bitterwoods => {
-    :camp => [132, 75, 20, 00],
-    :snapfire => [1503, 532, 204, 00],
-    :barkbender => [2432, 623, 302, 00],
-    :whisperleaf => [4301, 1202, 460, 00],
-  }
+    :camp => {["The Hunting Camp",132, 75, 20, 00]},
+    :snapfire => {["Snapfire Clan",1503, 532, 204, 00]},
+    :barkbender => {["Barkbender Clan", 2432, 623, 302, 00]},
+    :whisperleaf => {["Whisperleaf Clan", 4301, 1202, 460, 00]},
+  },
 }
 #Now all data structures are created.  We must now have a user interface.
 #First we will prompt access and welcome the user, then enter into loops.
@@ -43,4 +43,26 @@ if input == 1
   puts "for more on the Darkest Bitterwoods, enter 3"
   input2 = gets.chomp
   input2 = input2.to_i
-  if
+  if input2 == 1
+    puts "The Dominion of Drakenstrom is a scattered land of holdfasts, freeholds, and monastic forts"
+    puts "It exists in a great forest, the largest in the land.  Naturally, the forest is full of dark things.  Dangerous things"
+    puts "There are several cities and villiages, and each has men and women willing to die for their home."
+    run = true
+    move = 0
+    continent.each do |key, value|
+      puts key
+      value.each do |k,v|
+        puts k
+        puts v
+      end
+    end
+  end
+
+  elsif input2== 2
+    puts ""
+
+  elsif input2 ==3
+    puts ""
+
+  else
+    puts "Fine, I'll avoid a lore dump"
