@@ -49,8 +49,8 @@ if input == 1
     puts "There are several cities and villiages, and each has men and women willing to die for their home."
     run = true
     move = 0
-    continent.each do |key, value|
-      puts key
+    continent[:drakenstrom].each do |town|
+      puts ""
       value.each do |k,v|
         puts k
         puts v
