@@ -34,3 +34,13 @@ puts "Welcome to the mapbuddy"
 puts "For an overview of the region, enter 1.  To enter browser mode, press 2"
 input = gets.chomp
 input = input.to_i
+if input == 1
+  puts "This currently unnamed region is the current home of quite a bit of bad things"
+  puts "There is litte in the way of civilization, with only two major regions surviving"
+  puts "However there is hope, as the region of the Bitterwoods is potentially centralizing"
+  puts "For more information on the Dominion of Drakenstrom, enter 1"
+  puts "For more on the Grand Union of Malvurnia, enter 2"
+  puts "for more on the Darkest Bitterwoods, enter 3"
+  input2 = gets.chomp
+  input2 = input2.to_i
+  if
