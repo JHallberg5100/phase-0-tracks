@@ -26,3 +26,23 @@ def fibo(input_i)
   end
   return @output_array
 end
+
+#def int(array_i)
+#  count =0
+#  problem = false
+#  while problem == false
+#    while count < array_i.length
+#      if array_i[count +1] != nil
+##          array_i[count], array_i[count +1] = array_i[count +1], array_i[count]
+  #        count +=1
+  #      else
+#          count +=1
+#        end
+#      else
+#        return
+#      end
+
+#    end
+#      p array_i
+##end
+#int(tester)
