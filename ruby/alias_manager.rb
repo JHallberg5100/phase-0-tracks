@@ -8,7 +8,7 @@
 #Publish
 @first_name =""
 @last_name= ""
-def breaker(input_s)
+def name_break(input_s) #Take the input name and break into first and last
   holder =" "
   holder = input_s.split(" ")
   @first_name = holder[0]
@@ -18,6 +18,27 @@ def breaker(input_s)
   puts @last_name
   return @first_name , @last_name
 end
-breaker("Kelly Clark")
-puts @first_name
-puts @last_name
+
+def cycle_vowel(name_input)
+  array_cycle = name_input.split('')
+  yield(array_cycle)
+  p array_cycle
+  return array_cycle
+end
+
+cycle_vowel  do array_cycle.map! {|letter| }
+  if letter == "a"
+    letter = "e"
+  elsif letter == "e"
+    letter = "i"
+  elsif letter == "i"
+    letter = "o"
+  elsif letter =="o"
+    letter = "u"
+  elsif letter == "u"
+    letter = 'a'
+  end
+  p array_cycle
+end
+
+  cycle_vowel("Aegon Eon")
