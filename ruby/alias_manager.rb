@@ -78,8 +78,38 @@ end
 p input_s
 end
 
-name_break("Anna Karina")
-vowel_swap(@first_name)
+def con_swap(input_s)
+  length = input_s.length
+  puts "I am #{length} length now"
+  input_s = input_s.downcase!
+  input_s = input_s.split("")
+  count = 0
+
+  while count < length
+    if (input_s[count] == "a" || input_s[count] == "e") || (input_s[count] == "i" || input_s[count] == "o" )
+        count += 1
+        puts "I am adding one with nothing"
+        puts count
+    else
+      if input_s[count] == "u"
+        count +=1
+        puts "I am adding due to u"
+        puts count
+      else
+        input_s[count] = input_s[count].next
+      count +=1
+      puts "I should be swapping"
+      puts count
+      end
+    end
+    return input_s
+  end
+output = input_s.to_s
+return output
+end
+
+output = con_swap("AaBbCcDdEe")
+
 #cycle_vowel() do array_cycle.map! {|letter| }
 #  if letter == "a"
 #    letter = "e"
