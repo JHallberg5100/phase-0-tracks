@@ -13,16 +13,12 @@ def name_break(input_s) #Take the input name and break into first and last
   holder = input_s.split(" ")
   @first_name = holder[0]
   @last_name = holder[1]
-  puts input_s
-  puts @first_name.to_s
-  puts @last_name.to_s
   return @first_name , @last_name
 end
 
 
 def vowel_swap(input_s)
   input_s = input_s.split("")
-  p input_s
   length = input_s.length
   count = 0
   while count < length
@@ -54,8 +50,6 @@ end
 
 def con_swap(input_s)
   @length = input_s.length
-  puts "I am #{@length} length now"
-  input_s = input_s.downcase!
   input_s = input_s.split("")
   @count = 0
 
@@ -63,63 +57,72 @@ def con_swap(input_s)
     if input_s[@count] == "a" || input_s[@count] == "z"
       if input_s[@count] == "a"
         @count += 1
-        puts 'debug a'
-        puts "#{@count} count"
-        puts "#{@length} length"
       else
         input_s[@count]= "a"
         @count +=1
-        puts "debug z"
       end
     elsif input_s[@count] == "e" || input_s[@count] == "d"
       if input_s[@count] == "e"
         @count += 1
-        puts "debug e"
       else
         input_s[@count]= "f"
         @count +=1
-        puts "debug d"
       end
     elsif input_s[@count] == "i" || input_s[@count] == "h"
       if input_s[@count] == "i"
         @count += 1
-        puts "debug i"
       else
         input_s[@count]= "j"
         @count +=1
-        puts "debug other"
       end
     elsif input_s[@count]== "o" || input_s[@count] == "n"
       if input_s[@count] == "o"
         @count += 1
-        puts "debug other"
       else
         input_s[@count]= "p"
         @count +=1
-        puts "debug other"
       end
     elsif input_s[@count] == "u" || input_s[@count] == "t"
       if input_s[@count] == "a"
         @count += 1
-        puts "debug other"
       else
         input_s[@count]= "v"
         @count +=1
-        puts "debug other"
       end
     else
       input_s[@count] = input_s[@count].next
       @count +=1
-      puts "debug ticker"
     end
   end
   output = input_s.join("")
   return output
 end
 
+logs = {
+
+}
+#THis is the start of the program at large
+while true
+puts "Welcome to the Codename Genie.  Enter your full name.  If you wish to view the records enter Review.  To end, End"
+entry = gets.chomp
+if entry == "Review"
+  logs.each {|real, code| puts "#{real}'s code is #{code}"}
+elsif entry == "End"
+  break
+else
+  name_break(entry)
+  placeholder1 = ""
+  placeholder2 = ""
+  placeholder1 = @first_name + " " + @last_name
+  @first_name = vowel_swap(@first_name)
+  @first_name = con_swap(@first_name)
+  @last_name = vowel_swap(@last_name)
+  @last_name = con_swap(@last_name)
+  placeholder2 = @first_name + " " + @last_name
+  logs[placeholder1] = placeholder2
+  puts "Your spyname is #{placeholder2}"
 
 
-tester = vowel_swap("Abigail")
-p "#{tester} says Hi"
-output = con_swap("AaBbCcDdEe")
-p output
+
+end
+end
