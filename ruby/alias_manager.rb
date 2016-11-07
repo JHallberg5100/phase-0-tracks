@@ -17,7 +17,7 @@ def name_break(input_s) #Take the input name and break into first and last
 end
 
 
-def vowel_swap(input_s)
+def vowel_swap(input_s) #Cycle through all letters and change vowels to the next vowel
   input_s = input_s.split("")
   length = input_s.length
   count = 0
@@ -48,7 +48,7 @@ output = input_s.join("")
 return output
 end
 
-def con_swap(input_s)
+def con_swap(input_s) #Cycle throught letters and change all consonants to their proceeding letter
   @length = input_s.length
   input_s = input_s.split("")
   @count = 0
@@ -110,7 +110,7 @@ if entry == "Review"
 elsif entry == "End"
   break
 else
-  name_break(entry)
+  name_break(entry) #Use methods to switch up names
   placeholder1 = ""
   placeholder2 = ""
   placeholder1 = @first_name + " " + @last_name
