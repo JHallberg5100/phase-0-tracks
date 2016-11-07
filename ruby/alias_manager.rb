@@ -19,35 +19,7 @@ def name_break(input_s) #Take the input name and break into first and last
   return @first_name , @last_name
 end
 
-#def vowel_swap(input_s)
-  #input_s = input_s.split("")
-#  finished = 1
-#  counter = 0
-#  length = input_s.length
-#  until finished == length
-#    if input_s[counter] == "a" || input_s[counter] == "A"
-#      input_s[counter] = "e"
-#      counter += 1
-#    elsif input_s[counter] == "e" || input_s[counter] == "E"
-#      input_s[counter] = "i"
-#      counter += 1
-#    elsif input_s[counter] == "i" || input_s[counter] == "I"
-#      input_s[counter] = "o"
-#      counter += 1
-#    elsif input_s[counter] == "o" || input_s[counter] == "O"
-#      input_s[counter] = "u"
-#      counter += 1
-#    elsif input_s[counter] == "u" || input_s[counter] == "U"
-#      input_s[counter] = "a"
-#      counter += 1
-#    else
-#      counter += 1
-#    end
-#  end
-#  puts input_s
-#  return input_s
-#  end
-#  vowel_swap("Anna")
+
 def vowel_swap(input_s)
   input_s = input_s.split("")
   p input_s
@@ -73,54 +45,81 @@ def vowel_swap(input_s)
     else
       count +=1
     end
-  p input_s
-end
-p input_s
+
 end
 
-def con_swap(input_s)
-  length = input_s.length
-  puts "I am #{length} length now"
-  input_s = input_s.downcase!
-  input_s = input_s.split("")
-  count = 0
-
-  while count < length
-    if (input_s[count] == "a" || input_s[count] == "e") || (input_s[count] == "i" || input_s[count] == "o" )
-        count += 1
-        puts "I am adding one with nothing"
-        puts count
-    else
-      if input_s[count] == "u"
-        count +=1
-        puts "I am adding due to u"
-        puts count
-      else
-        input_s[count] = input_s[count].next
-      count +=1
-      puts "I should be swapping"
-      puts count
-      end
-    end
-    return input_s
-  end
-output = input_s.to_s
+output = input_s.join("")
 return output
 end
 
-output = con_swap("AaBbCcDdEe")
+def con_swap(input_s)
+  @length = input_s.length
+  puts "I am #{@length} length now"
+  input_s = input_s.downcase!
+  input_s = input_s.split("")
+  @count = 0
 
-#cycle_vowel() do array_cycle.map! {|letter| }
-#  if letter == "a"
-#    letter = "e"
-#  elsif letter == "e"
-#    letter = "i"
-#  elsif letter == "i"
-#    letter = "o"
-#  elsif letter =="o"
-#    letter = "u"
-#  elsif letter == "u"
-#    letter = 'a'
-#  end
-#  p array_cycle
-#end
+  while @count != @length
+    if input_s[@count] == "a" || input_s[@count] == "z"
+      if input_s[@count] == "a"
+        @count += 1
+        puts 'debug a'
+        puts "#{@count} count"
+        puts "#{@length} length"
+      else
+        input_s[@count]= "a"
+        @count +=1
+        puts "debug z"
+      end
+    elsif input_s[@count] == "e" || input_s[@count] == "d"
+      if input_s[@count] == "e"
+        @count += 1
+        puts "debug e"
+      else
+        input_s[@count]= "f"
+        @count +=1
+        puts "debug d"
+      end
+    elsif input_s[@count] == "i" || input_s[@count] == "h"
+      if input_s[@count] == "i"
+        @count += 1
+        puts "debug i"
+      else
+        input_s[@count]= "j"
+        @count +=1
+        puts "debug other"
+      end
+    elsif input_s[@count]== "o" || input_s[@count] == "n"
+      if input_s[@count] == "o"
+        @count += 1
+        puts "debug other"
+      else
+        input_s[@count]= "p"
+        @count +=1
+        puts "debug other"
+      end
+    elsif input_s[@count] == "u" || input_s[@count] == "t"
+      if input_s[@count] == "a"
+        @count += 1
+        puts "debug other"
+      else
+        input_s[@count]= "v"
+        @count +=1
+        puts "debug other"
+      end
+    else
+      input_s[@count] = input_s[@count].next
+      @count +=1
+      puts "debug ticker"
+    end
+  end
+  output = input_s.join("")
+  return output
+end
+
+
+
+tester = vowel_swap("Abigail")
+p "#{tester} says Hi"
+output = con_swap("AaBbCcDdEe")
+p output
