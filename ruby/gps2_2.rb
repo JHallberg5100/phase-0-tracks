@@ -83,3 +83,22 @@ puts add_item("tomato", list_test, 10)
 puts remove_item("tomato", list_test)
 puts update_quantity("potato", list_test, 11352)
 print_list(list_test)
+
+
+#++++++++REFLECTION STUFF++++++++++
+#Pseudocode is an important part of coding.  This is a much more structured approach then I normally take, so  I should try using it more often
+#
+#In this challange Hashes are the far superior method for storing data.  The downside to that is that if you wish each item.
+#to have more then one data point you would need to store them in an array inside the hash.
+#
+#A method returns the last datapoint before it terminates.  Hard/explicit returns are prefered though.
+#
+#Variables are the arguments of methods normally.  However, if you have a yield inside the method a block of code can be passed.
+#
+#There are two ways that immeditally spring to mind when it comes to passing info between methods.  The first is global variables, as when a method
+#stores data in that variable it can be accessed inside other variables.  The other is having one arguments return that data, and store it in a variable which is then passed to
+#the other as an argument.
+#
+#Blocks are a bit confusing still, mostly around the yield and when its used.
+#However beyond that everything makes alot more sense now.
+#
