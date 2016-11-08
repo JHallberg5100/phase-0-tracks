@@ -50,7 +50,7 @@ end
 # remove that key from the hash
 #return the hash
 # output:hash
-def remove_list(item, list)
+def remove_item(item, list)
   list.delete(item)
   return list
 end
@@ -80,6 +80,6 @@ end
 
 list_test = list_maker("potato turnip corn banana")
 puts add_item("tomato", list_test, 10)
-puts remove_list("tomato", list_test)
+puts remove_item("tomato", list_test)
 puts update_quantity("potato", list_test, 11352)
 print_list(list_test)
