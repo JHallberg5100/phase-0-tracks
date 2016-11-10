@@ -1,0 +1,4 @@
+Create a few dozen words.
+when the game is initialized, pick a word, and create an array that is _ in each char slot
+After that point, there should be a guess method, which puts the letter in a guess array, and then checks it
+That guess array is used to make sure there is not a deduction from guesing a twice.
