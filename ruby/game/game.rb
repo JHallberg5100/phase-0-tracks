@@ -46,7 +46,6 @@ class Full_Game
   end
 
   def guess(word)
-
     @guess = word
 
     @user_word.map! do |letter|
@@ -101,8 +100,14 @@ end
 
 puts "Welcome to the game"
 puts "What word would you like to put in today?"
-My_game = Full_Game.new("word")
-puts "The user word is #{My_game.user_word}"
-puts "The current display word is #{My_game.display_word}"
-puts "Word is #{My_game.word}"
-puts My_game.tot_guess
+@my_game = Full_Game.new("word")
+p @my_game.class
+puts "The user word is #{@my_game.user_word}"
+puts "The current display word is #{@my_game.display_word}"
+puts "Word is #{@my_game.word}"
+puts @my_game.tot_guess
+@my_game.guess("o")
+puts "The user word is #{@my_game.user_word}"
+puts "The current display word is #{@my_game.display_word}"
+puts "Word is #{@my_game.word}"
+puts @my_game.tot_guess
