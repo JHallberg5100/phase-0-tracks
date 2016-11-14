@@ -9,5 +9,7 @@ describe Hangman do
     expect(game.guess("o")).to eq true
   end
 
-
+  it "check game" do
+    expect(game.guess("o")).to eq false
+  end
 end
