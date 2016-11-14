@@ -1,13 +1,16 @@
 require_relative "game"
-let(:game){Game.new}
-describe Game do
-  it "initializes game" do
-  expect(game.start("word")).to eq "word"
-  end
+
+describe Full_Game do
+
+  let(:game){Full_Game.new("word")}
+
   it "guesses letter" do
-  expect(game.guess("o")).to eq true
+
+    expect(game.guess("o")).to eq true
   end
-  it "Properly updates"
-  expect(game.mark(true)).to eq true
+
+  it "Properly updates" do
+
+    expect(game.mark(true)).to eq true
   end
 end

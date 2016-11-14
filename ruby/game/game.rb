@@ -9,49 +9,77 @@
 #Create will be the init
 #There it will take a word from the user, and put it as the word to guess
 #Then, it will create a user visible list for _
-Class Game
-  def initialize
+class Full_Game
+  attr_accessor :user_word, :display_word, :tot_guess, :word
+  def initialize(word)
     @num_guess = 0
-    puts "Please enter a word to guess"
-    @word = gets.chomp
-    @word = @word.to_string
+    @word = word.to_s
+
     if @word.length < 4
+
       @tot_guess = 3
+
     elsif @word.length < 8
+
       @tot_guess = 5
+
     else
+
       @tot_guess = 7
-    @user_word = []
-    @user_word = @word.split
-    @display_word = @user_word
-    @display_word.map! {|letter| letter = "_"}
 
     end
+
+    @user_word = []
+    @user_word = @word.split("")
+
+    @display_word = user_word
+
+    @display_word.map! {|letter| letter = "_"}
+  end
+
+  end
+
+  def info
+    puts @user_word
+    puts @display_word
+    puts @tot_guess
   end
 
   def guess(word)
 
     @guess = word
+
     @user_word.map! do |letter|
+
       if letter == @guess
+
         place_holder = letter.index
         @display_word[place_holder] = @guess
         @display_word
         guess_truth = true
+
       else
+
         guess_truth = false
+
       end
+
       if guess_truth == true
+
         puts @display_word
         puts "Good Guess!"
         guess_truth
+
       else
         @num_guess += 1
         guess_truth
+
       end
+
     end
 
     def check
+
       @display_word.map! do |letter|
         if letter == "_"
           success = false
@@ -63,5 +91,18 @@ Class Game
         else
           puts "Congratz!"
           break
+        end
       end
+    end
+
 end
+
+
+
+puts "Welcome to the game"
+puts "What word would you like to put in today?"
+My_game = Full_Game.new("word")
+puts "The user word is #{My_game.user_word}"
+puts "The current display word is #{My_game.display_word}"
+puts "Word is #{My_game.word}"
+puts My_game.tot_guess
