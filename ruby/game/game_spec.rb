@@ -1,16 +1,13 @@
-require_relative "game"
+require_relative "game2.0"
 
-describe Full_Game do
+describe Hangman do
 
-  let(:game){Full_Game.new("word")}
+  let(:game){Hangman.new("word")}
 
   it "guesses letter" do
 
     expect(game.guess("o")).to eq true
   end
 
-  it "Properly updates" do
 
-    expect(game.mark(true)).to eq true
-  end
 end

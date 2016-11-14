@@ -9,8 +9,7 @@
 #Create will be the init
 #There it will take a word from the user, and put it as the word to guess
 #Then, it will create a user visible list for _
-class Full_Game
-  attr_accessor :user_word, :display_word, :tot_guess, :word
+module Manipulations
   def initialize(word)
     @num_guess = 0
     @word = word.to_s
@@ -93,21 +92,25 @@ class Full_Game
         end
       end
     end
-
+end
+class Full_Game
+  include Manipulations
+  attr_accessor :user_word, :display_word, :tot_guess, :word
 end
 
 
 
+include Manipulations
 puts "Welcome to the game"
 puts "What word would you like to put in today?"
-@my_game = Full_Game.new("word")
-p @my_game.class
-puts "The user word is #{@my_game.user_word}"
-puts "The current display word is #{@my_game.display_word}"
-puts "Word is #{@my_game.word}"
-puts @my_game.tot_guess
-@my_game.guess("o")
-puts "The user word is #{@my_game.user_word}"
-puts "The current display word is #{@my_game.display_word}"
-puts "Word is #{@my_game.word}"
-puts @my_game.tot_guess
+my_game = Full_Game.new("word")
+p my_game.class
+puts "The user word is #{my_game.user_word}"
+puts "The current display word is #{my_game.display_word}"
+puts "Word is #{my_game.word}"
+puts my_game.tot_guess
+my_game.info
+puts "The user word is #{my_game.user_word}"
+puts "The current display word is #{my_game.display_word}"
+puts "Word is #{my_game.word}"
+puts my_game.tot_guess
