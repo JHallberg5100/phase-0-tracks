@@ -82,3 +82,17 @@ end
 
 #=======================================================================
 # Reflection Section
+#The two differing hash syntaxes come as what their key is.  The first hash has a string as the key, while
+#the second hash has two :symbols, and has two data points in it.
+
+#Require relative pulls in a specific file, which is a relative of it.  So as the two files are in the same folder,
+#they just need the file name as opposed to a full filepath.
+
+
+#.each or .map are both good ways to iterate through a hash.  Blocks is useful for this.  You can also call indiviual keys, but that
+#is a bit un-DRY.
+
+#Variables that are instanced are nice.  They are easy to use, and work out pretty well.  However, scope is pretty important when
+#dealing with classes.
+
+#This challange got me much better at refactoring.  While normally I just focus on having it work, having it work and look pretty is nice.
