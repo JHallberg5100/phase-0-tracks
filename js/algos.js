@@ -41,7 +41,7 @@ function getRandomInt(min, max) {
 function Nonsense_generator(input){
   //initialize variables for syllables, and the output
   var counter = input;
-  var output_string;
+  var output_string = "";
   var output_array = [];
   var rand_num = 0
   var non_syl = ["as","ef","br","wd","po","rf",'ae','xi',"eu",'qu','er','ve','gr','aw','pe','as','xe','ol','ch','ui'];
@@ -49,12 +49,12 @@ function Nonsense_generator(input){
     //To begin, take the input and initilize it as i.  Run until i == 0
     var rando = getRandomInt(1,5);
     for (rando; rando != 0; rando--){
-      rand_num = getRandomInt(0,20);
+      rand_num = getRandomInt(0,19);
       output_string = output_string + non_syl[rand_num];
 
     }
     output_array.push(output_string);
-
+    output_string = ""
   }
   console.log(output_array);
 }
