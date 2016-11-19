@@ -15,3 +15,18 @@ function reverse(input){
   console.log(output)
 }
 reverse("This is a word")
+
+function Reverser(input_word){
+  var word = "";
+  word = word + input_word;
+  var output_word = "";
+  for (var i = 0; i < word.length ; i--){
+    output_word = output_word + word[i-1];
+
+  }
+  console.log(output_word);
+  return output_word;
+}
+
+var my_test = Reverser("dragon");
+console.log(my_test);
