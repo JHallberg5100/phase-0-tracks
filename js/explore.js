@@ -4,29 +4,17 @@
 // First the input will start at the last letter, and then slowly move backwards over each charater.
 // That charater will be put in the first part of the output
 // then after all has been added, the output will be printed.
-function reverse(input){
-  for (var i = input.length; i = 0 ; i -= 1){
-    var output = ""
-    var count = 0
-    output + input[i]
-    count += 1
-
+function reverse(word){
+  var output = "";
+  console.log("does this thing even work")
+  var count = 0;
+  var i = word.length;
+  console.log(i);
+  while (i !== 0){
+    output = output + word[i -1];
+    console.log("comeon");
+    i = i - 1;
   }
-  console.log(output)
+console.log(output);
 }
-reverse("This is a word")
-
-function Reverser(input_word){
-  var word = "";
-  word = word + input_word;
-  var output_word = "";
-  for (var i = 0; i < word.length ; i--){
-    output_word = output_word + word[i-1];
-
-  }
-  console.log(output_word);
-  return output_word;
-}
-
-var my_test = Reverser("dragon");
-console.log(my_test);
+reverse("Dragon");
