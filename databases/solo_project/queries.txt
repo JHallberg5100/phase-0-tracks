@@ -1,0 +1,66 @@
+sqlite3 shiplog.db
+SQLite version 3.15.1 2016-11-04 12:08:49
+Enter ".help" for usage hints.
+sqlite> .tables
+ship     traffic
+sqlite> SELECT * FROM traffic
+   ...> ;
+1|1|John Mellencamp|true|2016-11-26 22:10:40
+2|1|John Mellencamp|true|2011110
+3|1|John Mellencamp|false|20141201
+4|4|Werner Van Bismark|true|19851201
+5|3|Dirk Numman|true|19751201
+sqlite> UPDATE traffic SET date= CURRENT_TIMESTAMP WHERE docking= "true"
+   ...> ;
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.
+sqlite> SELECT * FROM traffic;
+1|1|John Mellencamp|true|2016-11-27 20:50:25
+2|1|John Mellencamp|true|2016-11-27 20:50:25
+3|1|John Mellencamp|false|20141201
+4|4|Werner Van Bismark|true|2016-11-27 20:50:25
+5|3|Dirk Numman|true|2016-11-27 20:50:25
+sqlite>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3.
+sqlite3 shiplog.db
+SQLite version 3.15.1 2016-11-04 12:08:49
+Enter ".help" for usage hints.
+sqlite> .tables
+ship     traffic
+sqlite> SELECT * FROM traffic
+   ...> ;
+1|1|John Mellencamp|true|2016-11-26 22:10:40
+2|1|John Mellencamp|true|2011110
+3|1|John Mellencamp|false|20141201
+4|4|Werner Van Bismark|true|19851201
+5|3|Dirk Numman|true|19751201
+sqlite> UPDATE traffic SET date= CURRENT_TIMESTAMP WHERE docking= "true"
+   ...> ;
+sqlite> SELECT * FROM traffic;
+1|1|John Mellencamp|true|2016-11-27 20:50:25
+2|1|John Mellencamp|true|2016-11-27 20:50:25
+3|1|John Mellencamp|false|20141201
+4|4|Werner Van Bismark|true|2016-11-27 20:50:25
+5|3|Dirk Numman|true|2016-11-27 20:50:25
+sqlite>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4.
+sqlite> SELECT cregistry, corigin, captain, date FROM traffic
+   ...> JOIN ship
+   ...> ON traffic.ship_id=ship.id;
+Denmark|Thailand|John Mellencamp|2016-11-27 20:50:25
+Denmark|Thailand|John Mellencamp|2016-11-27 20:50:25
+Denmark|Thailand|John Mellencamp|20141201
+U.S.A|U.S.A|Werner Van Bismark|2016-11-27 20:50:25
+U.S.A|U.S.A|Dirk Numman|2016-11-27 20:50:25
+sqlite>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.sqlite> SELECT * FROM traffic
+   ...> ;
+1|1|John Mellencamp|true|2016-11-27 20:50:25
+2|1|John Mellencamp|true|2016-11-27 20:50:25
+4|4|Werner Van Bismark|true|2016-11-27 20:50:25
+5|3|Dirk Numman|true|2016-11-27 20:50:25
+sqlite>
+~~~~~~~~~~~~~~~~~~~~~
