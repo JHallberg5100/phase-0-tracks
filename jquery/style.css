@@ -1,0 +1,58 @@
+body{
+  background-color: silver;
+}
+#alex{
+  width:75%;
+  height:75%;
+}
+#sidebar{
+  display: inline-block;
+  width:10%;
+  vertical-align:top;
+  border: solid;
+  margin: 50px;
+  padding: 50px;
+  background-image: url(photos/star.jpg);
+}
+#content{
+  display:inline-block;
+  width:60%;
+}
+.image{
+  margin: auto;
+}
+footer{
+  margin-left:40%;
+  margin-right: 40%;
+}
+#bak{
+  width:99%;
+}
+#bud{
+  margin-left: 40%;
+  margin-right:40%;
+}
+a{
+  color: #6F5DE3
+}
+a:visited{
+  color : silver;
+}
+h3{
+  color: red;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+p{
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+@media (max-width: 400px) {
+  #sidebar{
+    width: 5%;
+    background-color:white;
+    border: none;
+    background-image:none;
+  }
+  a:visited{
+    color: red;
+  }
+}
